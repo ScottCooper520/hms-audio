@@ -89,7 +89,7 @@ class AuthorDetailView(generic.DetailView):
 # and constructs path as needed.
 # Serve from share root.
 def getAudioFilePath0(request, filename):
-    audio = pathlib.Path.home() / 'sharefromwindows' / filename
+    audio = pathlib.Path.home() / 'audiowindowsshare' / filename
     path = ""
     for part in audio.parts:
         if part != "/":
@@ -100,7 +100,7 @@ def getAudioFilePath0(request, filename):
 
 # Serve from one level below share root.
 def getAudioFilePath1(request, path1, filename):
-    audio = pathlib.Path.home() / 'sharefromwindows' / path1 / filename
+    audio = pathlib.Path.home() / 'audiowindowsshare' / path1 / filename
     path = ""
     for part in audio.parts:
         if part != "/":
@@ -111,7 +111,7 @@ def getAudioFilePath1(request, path1, filename):
 
 # Serve from two levels below share root.
 def getAudioFilePath2(request, path1, path2, filename):
-    audio = pathlib.Path.home() / 'sharefromwindows' / path1 / path2 / filename
+    audio = pathlib.Path.home() / 'audiowindowsshare' / path1 / path2 / filename
     path = ""
     for part in audio.parts:
         if part != "/":
@@ -122,7 +122,7 @@ def getAudioFilePath2(request, path1, path2, filename):
 
 # Serve from three levels below share root.
 def getAudioFilePath3(request, path1, path2, path3, filename):
-    audio = pathlib.Path.home() / 'sharefromwindows' / path1 / path2 / path3 / filename
+    audio = pathlib.Path.home() / 'audiowindowsshare' / path1 / path2 / path3 / filename
     path = ""
     for part in audio.parts:
         if part != "/":

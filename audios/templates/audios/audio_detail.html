@@ -6,13 +6,13 @@
   <!-- <p><strong>Author:</strong> <a href="{% url 'author-detail' audio.author.pk %}">{{ audio.author }}</a></p>  -->
   <p><strong>Title:</strong> <a href="">{{ audio.title }}</a></p> 
 
-  <!-- <audio preload="auto" controls>
+  <audio preload="auto" autoplay controls>
     <source id="audioSource" src=""></source>
-  </audio> -->
+  </audio>
 
-  <video id="vid" preload="auto" autoplay controls>
+  <!-- <video id="vid" preload="auto" autoplay controls>
     <source id="audioSource" src=""></source>
-  </video>
+  </video> -->
 
   <div class="buffered">
     <span id="buffered-amount"></span>
@@ -54,8 +54,9 @@
   // So, browser url 127.0.0.1:8000/audios/audios/# renders this template (with relevant model instance).
   // This model instance is used to get the title, and that is used for the url to get the audio. 
   function playMusic(pk, path, title) {
-    // let baseUrl = "http://127.0.0.1:8000/audios/";        // For laptop testing
-    let baseUrl = "http://192.168.1.25:8000/audios/";  // For home server
+//    let baseUrl = "http://127.0.0.1:8010/audios/";     
+    // let baseUrl = "http://127.0.0.1:8000/audios/";  // For laptop testing
+    let baseUrl = "http://192.168.1.28:8010/audios/";  // For home server
     let source = document.getElementById("audioSource");
     if (!path || path == "None") {
       path = "";
@@ -69,7 +70,7 @@
     }
     setTimeout(() => {
       console.log("In playMusic()");
-      let v = document.getElementsByTagName("video")[0];
+      let v = document.getElementsByTagName("audio")[0];
       v.load();
       v.play();
       //ok setInterval(() => { console.log("Current Time in playMusic = " + v.currentTime); }, 10000);
@@ -91,7 +92,7 @@
   function testSeek(isFwd) {
     console.log("In testSeek()");
     let inc = 30;
-    var v = document.getElementsByTagName("video")[0];
+    var v = document.getElementsByTagName("audio")[0];
     console.log("currentTime = " + v.currentTime);
     let data = $("#debugData");
     data.html("In Test Seek. currentTime = " + v.currentTime + "<br>");
@@ -130,7 +131,7 @@
   // function runDebug() {
 
     //var myAudio = document.getElementById('my-audio');
-    let myAudio = document.getElementsByTagName("video")[0];
+    let myAudio = document.getElementsByTagName("audio")[0];
     let duration = myAudio.duration;
     let data2 = $("#debugData2");
     data2.html("<br>");

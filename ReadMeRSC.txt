@@ -1,3 +1,14 @@
+7/19/2020 - Updates to hms-audio
+================================
+Decided to create a separate audio/video server, along with separate myvenv, etc. Normally, you do this for each site and I will follow that pattern.
+
+Updated the following to make this audio-only:
+
+Created a new GitHub repo as follows (from within hms-audio folder):
+$ git init
+
+
+
 7/11/2020 - Got clone of media-server for Legion.
 
 2/28/2020 - Status
