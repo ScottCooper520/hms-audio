@@ -1,3 +1,4 @@
+7/21/2020 - Test git
 7/19/2020 - Updates to hms-audio
 ================================
 Decided to create a separate audio/video server, along with separate myvenv, etc. Normally, you do this for each site and I will follow that pattern.
