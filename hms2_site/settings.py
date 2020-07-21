@@ -26,7 +26,7 @@ SECRET_KEY = 'upxvb+dgff5!k(fv*d5byy2i_3_jxrpnci@(qakmf)^+djbrtu'
 DEBUG = True
 
 # Localhost, linuxserver (nuc), linuxserver (latitude)
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.25', '192.168.1.28']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.23', '192.168.1.28']
 
 
 # Application definition
